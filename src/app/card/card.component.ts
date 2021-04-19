@@ -15,14 +15,10 @@ export class CardComponent implements OnInit {
   in_use: any;
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.property);
-  }
+  ngOnInit(): void {}
   ngOnChanges() {
-    console.log(this.chat);
     if (this.chat?.label === 'assets') {
       this.in_use = this.chat['in-use'];
-      console.log('work', this.in_use);
     }
   }
 }
