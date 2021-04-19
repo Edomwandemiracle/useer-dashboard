@@ -12,6 +12,7 @@ export class CardComponent implements OnInit {
   capex: any;
   opex: any;
   assets: any;
+  in_use: any;
   constructor() {}
 
   ngOnInit(): void {
@@ -19,5 +20,9 @@ export class CardComponent implements OnInit {
   }
   ngOnChanges() {
     console.log(this.chat);
+    if (this.chat?.label === 'assets') {
+      this.in_use = this.chat['in-use'];
+      console.log('work', this.in_use);
+    }
   }
 }
