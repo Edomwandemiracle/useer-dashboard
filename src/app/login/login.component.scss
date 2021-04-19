@@ -1,0 +1,91 @@
+$white: #ffffff;
+$blue: #5a99c4;
+$black: #000000;
+$dark-blue: #13244e;
+$grey: #d0c9d6;
+$source-font: "Source Sans Pro", sans-serif;
+.data-text {
+  font-family: $source-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+}
+.padding {
+  padding: 10rem 5rem;
+}
+
+.background-black {
+  background: $black;
+  height: 100vh;
+}
+.logo {
+  background: linear-gradient(180deg, #13244e 0%, #75c5f0 100%);
+  color: $white;
+  width: 32px;
+  height: 32px;
+  font-family: $source-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+.express {
+  color: $blue;
+  font-family: $source-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+.login-account {
+  // font-family: $source-font;
+  font-family: France;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 41px;
+  color: $black;
+  width: 198px;
+}
+.welcome-back {
+  color: $black;
+}
+.input-d {
+  height: 40px;
+
+  background: $white;
+  box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+.submitBtn {
+  height: 40px;
+  background: $dark-blue;
+  border-radius: 6px;
+  color: $white;
+  border: none;
+  outline: none;
+}
+::placeholder {
+  font-family: $source-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: $grey;
+}
+.forgot-password {
+  font-family: $source-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: #0093dd;
+}

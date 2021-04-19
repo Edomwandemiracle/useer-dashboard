@@ -1,0 +1,157 @@
+<div
+  [ngClass]="[
+    chat.label == 'capex' ? 'class1' : '',
+    chat.label == 'opex' ? 'class2' : '',
+    chat.label == 'assets' ? 'class3' : ''
+  ]"
+>
+  <div class="row">
+    <div class="col-6">
+      <div class="total-play" *ngIf="chat?.label === 'capex'">
+        <p class="text-12 mb-0">Total Play(NGN)</p>
+        <p class="total-play-ammount card-header-text mb-0">
+          N{{ chat?.spent + chat?.balance | number }}
+        </p>
+      </div>
+      <div class="total-play" *ngIf="chat?.label === 'opex'">
+        <p class="text-12 mb-0">Total Work(NGN)</p>
+        <p class="total-play-ammount card-header-text mb-0">
+          N{{ chat?.spent + chat?.balance | number }}
+        </p>
+      </div>
+      <div class="total-play" *ngIf="chat?.label === 'assets'">
+        <p class="text-12 text-white mb-0">Total Cards</p>
+        <p class="total-play-ammount text-white card-header-text mb-0"></p>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="total-spent" *ngIf="chat?.label === 'capex'">
+        <p class="total-spent-text text-12 mb-0">
+          <span class="mr-1">
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="5" cy="5" r="5" fill="#1B5BAC" />
+            </svg>
+          </span>
+          Total Spent
+        </p>
+        <p class="total-spent-text text-12 mb-0">
+          <span class="mr-2">
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="5" cy="5" r="5" fill="#D7E2ED" />
+            </svg> </span
+          >Balance
+        </p>
+      </div>
+      <div class="total-spent" *ngIf="chat?.label === 'opex'">
+        <p class="total-spent-text text-12 mb-0">
+          <span class="mr-1">
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="5" cy="5" r="5" fill="#FF6542" />
+            </svg>
+          </span>
+          Total Spent
+        </p>
+        <p class="total-spent-text text-12 mb-0">
+          <span class="mr-2">
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="5" cy="5" r="5" fill="#EEDFD8" />
+            </svg> </span
+          >Balance
+        </p>
+      </div>
+      <div class="total-spent" *ngIf="chat?.label === 'assets'">
+        <p class="total-spent-text text-12 text-white mb-0">
+          <span class="mr-1">
+            <svg
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="4" cy="4" r="4" fill="#F6AE2D" />
+            </svg>
+          </span>
+          In-use
+        </p>
+        <p class="total-spent-text text-12 text-white mb-0">
+          <span class="mr-2">
+            <svg
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="4" cy="4" r="4" fill="#EEEAE4" />
+            </svg> </span
+          >In-active
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="total-spent" *ngIf="chat?.label === 'capex'">
+        <p class="total-spent-text text-12 mb-0">Total Spent(NGN)</p>
+        <p class="total-spent-ammount card-header-text mb-0">
+          N{{ chat?.spent | number }}
+        </p>
+      </div>
+      <div class="total-spent" *ngIf="chat?.label === 'opex'">
+        <p class="total-spent-text text-12 mb-0">Total Spent(NGN)</p>
+        <p class="total-spent-ammount card-header-text mb-0">
+          N{{ chat?.spent | number }}
+        </p>
+      </div>
+      <div class="total-spent" *ngIf="chat?.label === 'assets'">
+        <p class="total-spent-text text-white text-12 mb-0">Card In-use</p>
+        <p class="total-spent-ammount text-white card-header-text mb-0"></p>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="total-balance" *ngIf="chat?.label === 'capex'">
+        <p class="total-play-text text-12 mb-0">Balance(NGN)</p>
+        <p class="total-balance-ammount card-header-text mb-0">
+          {{ chat?.balance | number }}
+        </p>
+      </div>
+      <div class="total-balance" *ngIf="chat?.label === 'opex'">
+        <p class="total-play-text text-12 mb-0">Balance(NGN)</p>
+        <p class="total-balance-ammount card-header-text mb-0">
+          {{ chat?.balance | number }}
+        </p>
+      </div>
+      <div class="total-balance" *ngIf="chat?.label === 'assets'">
+        <p class="total-play-text text-white text-12 mb-0">In-active</p>
+        <p class="total-balance-ammount text-white card-header-text mb-0">
+          {{ chat?.active | number }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
